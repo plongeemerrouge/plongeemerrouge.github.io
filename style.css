@@ -1,0 +1,68 @@
+body {
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.border {
+    border: 20px solid white;
+    box-shadow: 0 0 10px rgba(0,0,0,0.5);
+    width: 1rem;
+    max-width: 20rem;
+    min-width: 10rem;
+}
+
+.flex {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.flex > * {
+    flex: 1 1 200px;
+    margin: 10px;
+}
+
+/* --- HEADER --- */
+
+header > img 
+{
+ height: 50px;
+ width: 100%;
+}
+
+nav > ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #333;
+}
+  
+nav > ul > li {
+    float: left;
+}
+
+nav > ul > .right {
+    float: right;
+}
+  
+nav > ul > li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+  
+nav > ul > li a:hover:not(.active) {
+    background-color: #111;
+}
+  
+nav .active {
+    background-color: #04AA6D;
+}
+
+/* --- MAIN --- */
+
+main {
+    margin: 20px;
+}
