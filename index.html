@@ -2,19 +2,12 @@
     <head>
         <title>Diving</title>
         <link rel="stylesheet" type="text/css" href="style.css">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="viewport" content="width=device-width, initial-scale=1"> 
+		<meta content="text/html;charset=utf-8" http-equiv="Content-Type">
+		<script type="text/javascript" src="script.js"></script>
     </head>
     <body>
-        <header>
-            <img src="header.jpg"/>
-            <nav>
-                <ul>
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="prize.html">Prize</a></li>
-                    <li class="right"><a href="contact.html">Contact</a></li>
-                </ul>
-            </nav>
-        </header>
+		<div w3-include-html="header/header.html"></div>
         <main>
             <h1>Explorez les merveilles sous-marines de l'Égypte lors d'un séjour plongée inoubliable</h1>
             <p>
@@ -44,4 +37,7 @@
             </ul>
         </main>
     </body>
+	<script>
+		includeHTML();
+	</script>
 </html>
