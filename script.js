@@ -1,9 +1,3 @@
-async function onLoaded()
-{
-	await includeHTML()
-	window.scrollTo(0, 0);
-}
-
 async function includeHTML() 
 {
   /* Loop through a collection of all HTML elements: */
