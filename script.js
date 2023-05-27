@@ -1,43 +1,56 @@
-function includeHTML() {
-  var z, i, elmnt, file, xhttp;
+async function onLoaded()
+{
+	await includeHTML()
+	window.scrollTo(0, 0);
+}
+
+async function includeHTML() 
+{
   /* Loop through a collection of all HTML elements: */
-  z = document.getElementsByTagName("*");
-  for (i = 0; i < z.length; i++) {
-	elmnt = z[i];
+  let elements = document.getElementsByTagName("*");
+  let promises = new Array();
+  for (let element of elements) 
+  {
 	/*search for elements with a certain atrribute:*/
-	file = elmnt.getAttribute("w3-include-html");
-	if (file) {
-	  /* Make an HTTP request using the attribute value as the file name: */
-	  xhttp = new XMLHttpRequest();
-	  xhttp.onreadystatechange = function() {
-		if (this.readyState == 4) {
-		  if (this.status == 200) {elmnt.innerHTML = this.responseText;}
-		  if (this.status == 404) {elmnt.innerHTML = "Page not found.";}
-		  /* Remove the attribute, and call this function once more: */
-		  elmnt.removeAttribute("w3-include-html");
-		  includeHTML();
-		}
-	  }
-	  xhttp.open("GET", file, true);
-	  xhttp.send();
-	  /* Exit the function: */
-	  window.scrollTo(0, 0);
-	  return;
-	}
+	let file = element.getAttribute("w3-include-html");
+	
+	if (!file) continue;
+	promises.push(replaceWithFile(element,file));
   }
+
+  Promise.all(promises).then((values) => {
+	window.scrollTo(0, 0);
+  	})
+  
+}
+
+async function replaceWithFile(element, file)
+{
+	element.innerHTML = await fetch(file).then(response => 
+		{
+			if (response.ok)
+			{
+				return response.text(); 
+			}
+			return "Page not Found";
+		});
+	element.removeAttribute("w3-include-html");
 }
 
 /* --- DIAPORAMA IMAGES --- */
 
-function plusSlides(n) {
+function plusSlides(n) 
+{
 	showSlides(slideIndex += n);
 }
 
-function currentSlide(n) {
+function currentSlide(n) 
+{
 	showSlides(slideIndex = n);
 }
 
-function showSlides(n) {
+function showSlides(n) 
+{
 	var i;
 	var slides = document.getElementsByClassName("custom-slider");
 	var dots = document.getElementsByClassName("dot");
