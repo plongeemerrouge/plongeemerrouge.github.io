@@ -1,16 +1,18 @@
 html {
     --border-radius: 0.5rem;
+
 }
 
 body {
     margin: 0;
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif, sans-serif;
-    background-image: url("header/header.jpg");
+    background-image: url("images/style/background.png");
     background-size: 100%;
-    background-repeat: no-repeat;
     
     background-color: rgb(37, 36, 36);
-    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    min-height: 100%;
 }
 
 .border {
@@ -24,28 +26,82 @@ body {
 .flex {
     display: flex;
     flex-wrap: wrap;
+
 }
 
 .flex > * {
     flex: 1 1 200px;
-    margin: 10px;
+    margin: 0.5rem;
 }
 
-main > h1 
-{
+/* main > h1 {
     color: white;
-    text-shadow: 0.1rem 0.1rem 0.1rem black;
+    text-shadow: 0.2rem 0.2rem 0.5rem black;
     margin: 0;
 
-}
+} 
 
 main > h2
 {
-    color: rgb(228, 227, 227);
-    text-shadow: 0.1rem 0.1rem 0.1rem black;
+    color: rgb(238, 238, 238);
+    text-shadow: 0.1rem 0.1rem 1rem black;
     font-weight: normal;
     margin: 0;
 }
+
+*/
+
+body {
+    display: flex;
+    flex-direction: column;
+}
+  
+main{
+    flex-grow: 1;
+    display: flex;
+}
+
+.title {
+    margin :auto;
+}
+
+.title  > h1 {
+    color: white;
+    margin: 1rem;
+    display: inline-block;
+    font-size: 4rem;
+
+}
+
+.title > h2
+{
+    color: rgb(238, 238, 238);
+    font-weight: normal;
+    font-size: 2rem;
+    margin: 1rem;
+    display: inline-block
+}
+
+.card {
+    background-color: white;
+    padding: 1rem;
+    box-shadow: 0 0 10px rgba(0,0,0,0.5);
+    width: 20rem;
+    max-width: 20rem;
+}
+
+.card > img
+{
+    width: 100%;
+}
+
+.card > h3 {
+    text-align: center;
+    margin: 0;
+    margin-bottom: 1rem;
+}
+
+
 
 /* --- HEADER --- */
 
@@ -96,11 +152,6 @@ nav .active {
 }
 
 /* --- MAIN --- */
-
-main {
-
-    border-radius: var(--border-radius);
-}
 
 video {
     width: 100%;
