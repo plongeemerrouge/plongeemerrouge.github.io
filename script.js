@@ -1,3 +1,13 @@
+window.addEventListener("DOMContentLoaded", (event) => {
+	onDOMLoaded()
+  });
+
+async function onDOMLoaded()
+{
+	await includeHTML()
+	window.scrollTo(0, 0);
+}
+
 async function includeHTML() 
 {
   /* Loop through a collection of all HTML elements: */
@@ -6,16 +16,13 @@ async function includeHTML()
   for (let element of elements) 
   {
 	/*search for elements with a certain atrribute:*/
-	let file = element.getAttribute("w3-include-html");
+	let file = element.getAttribute("html-file");
 	
 	if (!file) continue;
 	promises.push(replaceWithFile(element,file));
   }
 
-  Promise.all(promises).then((values) => {
-	window.scrollTo(0, 0);
-  	})
-  
+  await Promise.all(promises)
 }
 
 async function replaceWithFile(element, file)
@@ -28,7 +35,7 @@ async function replaceWithFile(element, file)
 			}
 			return "Page not Found";
 		});
-	element.removeAttribute("w3-include-html");
+	element.removeAttribute("html-file");
 }
 
 /* --- DIAPORAMA IMAGES --- */

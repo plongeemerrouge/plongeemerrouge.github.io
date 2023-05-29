@@ -1,6 +1,60 @@
+.gallery {
+    height: auto;
+  }
+  
+.gallery-cell {
+width: 60%;
+margin: 0.5rem;
+height: auto;
+background: #8C8;
+counter-increment: gallery-cell;
+}
+
+
+
+
+/* Media Query for Mobile Devices */
+@media (max-width: 480px) {
+
+}
+  
+/* Media Query for low resolution  Tablets, Ipads */
+@media (min-width: 481px) and (max-width: 1024px) {
+
+}
+  
+/* Media Query for Laptops and Desktops */
+@media (min-width: 1025px){
+
+}
+
+.title > h1 {
+    color: white;
+    display: block;
+    font-size: xx-large;
+    max-width: 70%;
+    margin: auto;
+}
+
+.title > h2
+{
+    color: rgb(238, 238, 238);
+    font-weight: normal;
+    font-size: x-large;
+    margin: auto;
+    max-width: 90%;
+    display: block
+}
+
+.title
+{
+    margin: 1rem;
+}
+
+
 html {
     --border-radius: 0.5rem;
-
+    color: white;
 }
 
 body {
@@ -58,36 +112,17 @@ body {
   
 main{
     flex-grow: 1;
-    display: flex;
+    position: relative;
 }
 
-.title {
-    margin :auto;
-}
 
-.title  > h1 {
-    color: white;
-    margin: 1rem;
-    display: inline-block;
-    font-size: 4rem;
-
-}
-
-.title > h2
-{
-    color: rgb(238, 238, 238);
-    font-weight: normal;
-    font-size: 2rem;
-    margin: 1rem;
-    display: inline-block
-}
 
 .card {
-    background-color: white;
+    background-color: rgba(0,0,0,0.5);
     padding: 1rem;
-    box-shadow: 0 0 10px rgba(0,0,0,0.5);
     width: 20rem;
     max-width: 20rem;
+    color: white;
 }
 
 .card > img
@@ -139,7 +174,7 @@ nav > ul > li a {
     display: block;
     color: white;
     text-align: center;
-    padding: 14px 16px;
+    padding: 10px;
     text-decoration: none;
 }
   
