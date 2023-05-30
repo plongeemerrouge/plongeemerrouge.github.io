@@ -6,6 +6,7 @@ async function onDOMLoaded()
 {
 	await includeHTML()
 	window.scrollTo(0, 0);
+    LoadGalleries();
 }
 
 async function includeHTML() 
@@ -40,30 +41,57 @@ async function replaceWithFile(element, file)
 
 /* --- DIAPORAMA IMAGES --- */
 
-function plusSlides(n) 
+function LoadGalleries()
 {
-	showSlides(slideIndex += n);
+    let galleries = document.getElementsByClassName("gallery");
+    for (gallery of galleries)
+    {
+        LoadGallery(gallery);
+    }
 }
 
-function currentSlide(n) 
+function LoadGallery(gallery)
 {
-	showSlides(slideIndex = n);
+    var slideIndex = parseInt(gallery.getAttribute("index"));
+    showSlide(slideIndex, gallery);
 }
 
-function showSlides(n) 
+function previousSlide(button) 
 {
-	var i;
-	var slides = document.getElementsByClassName("custom-slider");
-	var dots = document.getElementsByClassName("dot");
-	if (n > slides.length) {slideIndex = 1}
-	if (n < 1) {slideIndex = slides.length}
-	for (i = 0; i < slides.length; i++) {
-		slides[i].style.display = "none";
-	}
+    var gallery = button.parentElement
+    var slideIndex = parseInt(gallery.getAttribute("index"));
+	slideIndex = showSlide(slideIndex-1, gallery);
+    gallery.setAttribute("index", slideIndex);
+}
+
+function nextSlide(button) 
+{
+    var gallery = button.parentElement
+    var slideIndex = parseInt(gallery.getAttribute("index"));
+	slideIndex = showSlide(slideIndex+1, gallery);
+    gallery.setAttribute("index", slideIndex);
+}
+
+function showSlide(n, gallery) 
+{
+    var slides = gallery.getElementsByClassName("slides")[0];
+    
+    for (slide of slides.children)
+    {
+        slide.style.display = "none";
+    }
+
+    if (n >= slides.children.length) {n = 0}
+    if (n < 0) {n = slides.children.length - 1}
+
+    slides.children[n].style.display = "block";
+
+    var dots = gallery.getElementsByClassName("dots")[0].children;
+
 	for (i = 0; i < dots.length; i++) {
 		dots[i].className = dots[i].className.replace(" active", "");
 	}
-	slides[slideIndex-1].style.display = "block";
-	dots[slideIndex-1].className += " active";
+	dots[n].className += " active";
+    return n;
 }
 		
