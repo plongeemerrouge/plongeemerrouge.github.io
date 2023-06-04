@@ -165,15 +165,73 @@ main {
     position: relative;
 }
 
+:root {
+    --info_section_gradSize: 30px;
+    --info_section_gradColor:  rgba(71, 71, 243, 0.7);
+}
+
 .info_section {
-    padding:15px;
-    padding-left:80px;
-    padding-right:80px;
+    padding:var(--info_section_gradSize);
     max-width: fit-content;
-    background: radial-gradient(farthest-side,
-    rgba(0, 0, 203, 1),
-    rgba(183, 203, 247, 0)
-  );
+
+  background-image: 
+    /* center */
+    linear-gradient(to bottom, var(--info_section_gradColor), var(--info_section_gradColor)), 
+    /* top */
+    linear-gradient(to top, var(--info_section_gradColor), transparent), 
+    /* right */
+    linear-gradient(to right, var(--info_section_gradColor), transparent), 
+    /* bottom */
+    linear-gradient(to bottom, var(--info_section_gradColor), transparent), 
+    /* left */
+    linear-gradient(to left, var(--info_section_gradColor), transparent), 
+    /* top left */
+    radial-gradient(ellipse farthest-side at 100% 100%, var(--info_section_gradColor), transparent), 
+    /* top right */
+    radial-gradient(ellipse farthest-side at 0 100%, var(--info_section_gradColor), transparent), 
+    /* bottom right */
+    radial-gradient(ellipse farthest-side at 0 0, var(--info_section_gradColor), transparent), 
+    /* bottom left */
+    radial-gradient(ellipse farthest-side at 100% 0, var(--info_section_gradColor), transparent);
+  background-position: 
+    /* center */
+    var(--info_section_gradSize) var(--info_section_gradSize), 
+    /* top */
+    var(--info_section_gradSize) 0, 
+    /* right */
+    100% var(--info_section_gradSize), 
+    /* bottom */
+    var(--info_section_gradSize) 100%, 
+    /* left */
+    0 var(--info_section_gradSize),
+    /* top left */
+    0 0, 
+    /* top right */
+    100% 0,
+    /* bottom right */
+    100% 100%, 
+    /* bottom left */
+    0 100%;
+  background-size:
+    /* center */
+    calc(100% - 2 * var(--info_section_gradSize)) calc(100% - 2 * var(--info_section_gradSize)), 
+    /* top */
+    calc(100% - 2 * var(--info_section_gradSize)) var(--info_section_gradSize), 
+    /* right */
+    var(--info_section_gradSize) calc(100% - 2 * var(--info_section_gradSize)), 
+    /* bottom */
+    calc(100% - 2 * var(--info_section_gradSize)) var(--info_section_gradSize), 
+    /* left */
+    var(--info_section_gradSize) calc(100% - 2 * var(--info_section_gradSize)), 
+    /* top left */
+    var(--info_section_gradSize) var(--info_section_gradSize), 
+    /* top right */
+    var(--info_section_gradSize) var(--info_section_gradSize), 
+    /* bottom right */
+    var(--info_section_gradSize) var(--info_section_gradSize), 
+    /* bottom left */
+    var(--info_section_gradSize) var(--info_section_gradSize);
+  background-repeat: no-repeat;
 }
 
 
