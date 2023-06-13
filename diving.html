@@ -10,60 +10,46 @@
 		<div html-file="header/header.html"></div>
         <main>
             <h2>Formation proposées</h2>
-            <div class="section-container">
-                <div class="card">
-                    <div class="card-image">
+            <div class="tab">
+                <div class="tab-header">
+                    <div class="tab-header-item active" onclick="selectTab(this, 0)">
                         <img src="images/diving/poisson-clown.png" />
+                        <div>Baptème</div>
                     </div>
-                    <div class="card-description">
-                        <h3>Baptême de plongée</h3>
-                        <p>
-                            Le baptême de plongée est une expérience passionnante et accessible pour les novices qui souhaitent découvrir la magie du monde sous-marin. Encadré par des instructeurs qualifiés, vous serez initié aux bases de la plongée sous-marine et accompagné lors de votre première immersion. Vous apprendrez les techniques de base, la respiration sous l'eau et les gestes de sécurité indispensables. Ce premier contact avec la plongée vous permettra de vous familiariser avec l'équipement et de vivre une expérience inoubliable en explorant les eaux peu profondes et riches en vie marine. Le baptême de plongée est une introduction parfaite à ce merveilleux sport et peut être la première étape vers des aventures sous-marines plus poussées.
-                        </p>
-                    </div>
-                </div>
-        
-                <div class="card">
-                    <div class="card-image">
+                    <div class="tab-header-item" onclick="selectTab(this, 1)">
                         <img src="images/diving/tortue.png" />
+                        <div>OW</div>
                     </div>
-                    <div class="card-description">
-                        <h3>PADI Open Water</h3>
-                        <p>
-                            Le cours PADI Open Water est la première certification de plongée reconnue mondialement. Il vous offre les connaissances théoriques et les compétences pratiques nécessaires pour plonger en toute sécurité jusqu'à une profondeur maximale de 18 mètres. Ce cours complet combine des sessions de théorie ainsi que des plongées en eau libre supervisées. Vous apprendrez les fondamentaux de la plongée, y compris la planification des plongées, la gestion de l'équipement, les procédures de sécurité et les techniques de communication sous-marine. Une fois le cours terminé, vous serez prêt à explorer les merveilles sous-marines en toute confiance, en compagnie d'un binôme, dans de nombreux sites de plongée à travers le monde.
-                        </p>
-                    </div>
-                </div>
-        
-    
-                <div class="card">
-                    <div class="card-image">
+                    <div class="tab-header-item" onclick="selectTab(this, 2)">
                         <img src="images/diving/calamar.png" />
+                        <div>AOW</div>
                     </div>
-                    <div class="card-description">
-                        <h3>PADI Advanced Adventurer</h3>
-                        <p>
-                            Le cours PADI Advanced Adventurer est conçu pour les plongeurs certifiés Open Water qui souhaitent améliorer leurs compétences et élargir leurs horizons sous-marins. Ce programme vous permet d'explorer différentes spécialités de plongée et de gagner de l'expérience dans des environnements variés. Vous pourrez choisir parmi une sélection d'aventures de plongée passionnantes, telles que la plongée profonde, la plongée de nuit, la plongée sur épave, la plongée en dérive, etc. Chaque aventure de plongée comprend des connaissances théoriques, des exercices pratiques et des plongées supervisées par un instructeur expérimenté. Le cours Advanced Adventurer vous permettra de repousser vos limites et de découvrir de nouvelles sensations dans le monde sous-marin et vous permettra de plonger en toute sécurité jusqu'à une profondeur maximale de 18 mètres.
-                        </p>
-                    </div>
-                </div>
-    
-        
-                <div class="card">
-                    <div class="card-image">
+                    <div class="tab-header-item" onclick="selectTab(this, 3)">
                         <img src="images/diving/bouee-de-sauvetage.png" />
-                    </div>
-                    <div class="card-description">
-                        <h3>PADI Rescue</h3>
-                        <p>
-                            Le cours PADI Rescue est un programme essentiel pour les plongeurs qui souhaitent développer leurs compétences en matière de sécurité et de sauvetage. Vous apprendrez à anticiper et à gérer les situations d'urgence, à reconnaître les signes de détresse chez les autres plongeurs et à intervenir efficacement en cas de besoin. Vous acquerrez des compétences de sauvetage telles que la recherche et le relevage de plongeurs en détresse, la gestion du stress, la réanimation sectionio-pulmonaire (RCP) et les techniques de premiers secours spécifiques.
-                        </p>
+                        <div>Rescue</div>
                     </div>
                 </div>
-            
+                <div class="tab-content">
+                    <div class="tab-content-item active">
+                        <h3>Baptême de plongée</h3>
+                        Le baptême de plongée est une expérience passionnante et accessible pour les novices qui souhaitent découvrir la magie du monde sous-marin. Encadré par des instructeurs qualifiés, vous serez initié aux bases de la plongée sous-marine et accompagné lors de votre première immersion. Vous apprendrez les techniques de base, la respiration sous l'eau et les gestes de sécurité indispensables. Ce premier contact avec la plongée vous permettra de vous familiariser avec l'équipement et de vivre une expérience inoubliable en explorant les eaux peu profondes et riches en vie marine. Le baptême de plongée est une introduction parfaite à ce merveilleux sport et peut être la première étape vers des aventures sous-marines plus poussées.
+                    </div>
+                    <div class="tab-content-item">
+                        <h3>PADI Open Water</h3>
+                        Le cours PADI Open Water est la première certification de plongée reconnue mondialement. Il vous offre les connaissances théoriques et les compétences pratiques nécessaires pour plonger en toute sécurité jusqu'à une profondeur maximale de 18 mètres. Ce cours complet combine des sessions de théorie ainsi que des plongées en eau libre supervisées. Vous apprendrez les fondamentaux de la plongée, y compris la planification des plongées, la gestion de l'équipement, les procédures de sécurité et les techniques de communication sous-marine. Une fois le cours terminé, vous serez prêt à explorer les merveilles sous-marines en toute confiance, en compagnie d'un binôme, dans de nombreux sites de plongée à travers le monde.
+                    </div>
+                    <div class="tab-content-item">
+                        <h3>PADI Advanced Adventurer</h3>
+                        Le cours PADI Advanced Adventurer est conçu pour les plongeurs certifiés Open Water qui souhaitent améliorer leurs compétences et élargir leurs horizons sous-marins. Ce programme vous permet d'explorer différentes spécialités de plongée et de gagner de l'expérience dans des environnements variés. Vous pourrez choisir parmi une sélection d'aventures de plongée passionnantes, telles que la plongée profonde, la plongée de nuit, la plongée sur épave, la plongée en dérive, etc. Chaque aventure de plongée comprend des connaissances théoriques, des exercices pratiques et des plongées supervisées par un instructeur expérimenté. Le cours Advanced Adventurer vous permettra de repousser vos limites et de découvrir de nouvelles sensations dans le monde sous-marin et vous permettra de plonger en toute sécurité jusqu'à une profondeur maximale de 18 mètres.
+                    </div>
+                    <div class="tab-content-item">
+                        <h3>PADI Rescue</h3>
+                        Le cours PADI Rescue est un programme essentiel pour les plongeurs qui souhaitent développer leurs compétences en matière de sécurité et de sauvetage. Vous apprendrez à anticiper et à gérer les situations d'urgence, à reconnaître les signes de détresse chez les autres plongeurs et à intervenir efficacement en cas de besoin. Vous acquerrez des compétences de sauvetage telles que la recherche et le relevage de plongeurs en détresse, la gestion du stress, la réanimation sectionio-pulmonaire (RCP) et les techniques de premiers secours spécifiques.
+                    </div>
+                </div>
             </div>
                         
-            <h2>Plongée loisirs</h2>
+            <h2>Plongée proposée</h2>
             <div class="section-container">
                 <div class="section">
                     <img src="images/diving/plage.jpg" />

@@ -39,6 +39,27 @@ async function replaceWithFile(element, file)
 	element.removeAttribute("html-file");
 }
 
+/* --- TAB --- */
+
+function  selectTab(object, n)
+{
+    var tabHeader = object.parentElement
+    var tabContent = tabHeader.parentElement.getElementsByClassName("tab-content")[0];
+    
+    for (header of tabHeader.children)
+    {
+        header.className = header.className.replace(" active", "");
+    }
+
+    for (item of tabContent.children)
+    {
+        item.style.display = "none";
+    }
+
+    tabHeader.children[n].className += " active";
+    tabContent.children[n].style.display = "block";
+}
+
 /* --- DIAPORAMA IMAGES --- */
 
 function LoadGalleries()

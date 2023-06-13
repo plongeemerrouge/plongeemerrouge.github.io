@@ -64,7 +64,7 @@ main > *{
     transition: background-color 0.6s ease;
 }
 
-.active, .dot:hover 
+.dot.active, .dot:hover 
 { 
     background-color: #111111;
 }
@@ -188,6 +188,44 @@ main > *{
     margin-top: 0.5rem;
 }
 
+.tab-content{
+    background-color: rgba(0,0,0,0.3);
+    overflow: hidden;
+    padding: 1rem;
+}
+
+.tab-content-item{
+    display: none;
+}
+
+.tab-content-item.active{
+    display: block;
+}
+
+.tab-header{
+    display: flex;
+    border-radius: 1rem 1rem 0 0;
+    overflow: hidden;
+}
+
+.tab-header-item{
+    flex: 1;
+    background-color: rgba(0,0,0,0.5);
+    padding: 1rem;
+    min-width: 2rem;
+    cursor: pointer;
+    text-align: center;
+}
+
+.tab-header-item.active{
+    background-color: rgba(0,0,0,0.3);
+}
+
+.tab-header-item > img{
+    margin-bottom: 1rem;
+    width: 100%;
+}
+
 /* Media Query for Mobile Devices */
 @media (max-width: 480px) {
     .section {
@@ -203,6 +241,10 @@ main > *{
 
     .card-container > *:not(:last-child) {
         margin-bottom: 1rem;
+    }
+
+    .tab-content{
+        border-radius: 0 0 1rem 1rem;
     }
 }
   
@@ -222,6 +264,17 @@ main > *{
     .card-container > *:not(:last-child) {
         margin-bottom: 1rem;
     }
+
+    .tab-content{
+        border-radius: 0 1rem 1rem 1rem;
+    }
+    .tab-header{
+        max-width: max-content;
+    }
+
+    .tab-header-item {
+        max-width: 5rem;
+    }
 }
   
 /* Media Query for Laptops and Desktops */
@@ -240,7 +293,7 @@ main > *{
 
     .section > img
     {
-        width: 30%;
+        width: 40%;
         height: 100%;
     }
 
@@ -257,6 +310,17 @@ main > *{
     .card-container > * {
         flex: 1;
     }
+
+    .tab-content{
+        border-radius: 0 1rem 1rem 1rem;
+    }
+    .tab-header{
+        max-width: max-content;
+    }
+
+    .tab-header-item {
+        max-width: 5rem;
+    }
 }
 
 .title > h1 {
@@ -270,14 +334,14 @@ main > *{
 html {
     --border-radius: 0.5rem;
     color : white;
-    
+    text-align: justify;
 }
 
 body {
     margin: 0;
     font-family: "Helvetica";
     background-image: url('header/header.jpg');
-    background-color: rgb(100,100,100);
+    background-color: rgb(79, 79, 79);
     background-blend-mode: overlay;
     background-repeat: no-repeat;
     background-size: cover;
@@ -468,7 +532,7 @@ video {
     transition: background-color 0.6s ease;
 }
 
-.active, .dot:hover 
+.dot.active, .dot:hover 
 { 
     background-color: #111111;
 }
