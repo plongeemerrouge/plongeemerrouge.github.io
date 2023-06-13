@@ -6,7 +6,7 @@ async function onDOMLoaded()
 {
 	await includeHTML()
 	window.scrollTo(0, 0);
-    LoadGalleries();
+    /*LoadGalleries();*/
 }
 
 async function includeHTML() 
@@ -81,16 +81,19 @@ function previousSlide(button)
 {
     var gallery = button.parentElement
     var slideIndex = parseInt(gallery.getAttribute("index"));
-	slideIndex = showSlide(slideIndex-1, gallery);
-    gallery.setAttribute("index", slideIndex);
+	showSlide(slideIndex-1, gallery);
 }
 
 function nextSlide(button) 
 {
     var gallery = button.parentElement
     var slideIndex = parseInt(gallery.getAttribute("index"));
-	slideIndex = showSlide(slideIndex+1, gallery);
-    gallery.setAttribute("index", slideIndex);
+	showSlide(slideIndex+1, gallery);
+}
+
+function currentSlide(button, n)
+{
+    showSlide(n, button.parentElement.parentElement);
 }
 
 function showSlide(n, gallery) 
@@ -113,6 +116,6 @@ function showSlide(n, gallery)
 		dots[i].className = dots[i].className.replace(" active", "");
 	}
 	dots[n].className += " active";
-    return n;
+    gallery.setAttribute("index", n);
 }
 		
