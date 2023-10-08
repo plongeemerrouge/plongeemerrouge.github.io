@@ -9,43 +9,362 @@
     <body>
 		<div html-file="header/header.html"></div>
         <main>
-            <h2>Prestations et prix</h2>
-            
-            <div class="info_section">Prix des plongées sans location du matériel (Les bouteilles d'air 12 L et les plombs sont compris dans les prix)</div>
-            <table>
-                <thead>
-                    <tr><th>Type de plongée</th><th>Description</th><th>Prix</th></tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td>Plongée de plage</td><td>Plongée directement depuis le bord. Eau plate incluse</td><td>70 euros par jours (2 plongées)</td>
-                    </tr>
-                    <tr>
-                        <td>Plongée de zodiaque</td><td>Plongée depuis un zodiaque. Eau plate incluse</td><td>100 euros par jours (2 plongées)</td>
-                    </tr>
-                    <tr>
-                        <td>Plongée de bateau</td><td>Plongée depuis le bateau. Repas de midi inclus ainsi que l'eau plate et du thé</td><td>120 euros par jours (2 plongées)</td>
-                    </tr>
-                </tbody>
-            </table>
-            <div class="info_section">Prix supplémentaire pour les formations</div>
-            <table>
-                <thead>
-                    <tr><th>Formation</th><th>Nombre de plongées</th><th>Prix</th></tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td>Baptême de plongée</td><td>2 plongées (1 jour)</td><td>30 euros</td>
-                    </tr>
-                    <tr>
-                        <td>PADI Open Water</td><td>8 plongées (4 jours)</td><td>100 euros</td>
-                    </tr>
-                    <tr>
-                        <td>PADI Advanced Adventurer</td><td>6 plongées (3 jours)</td><td>75 euros</td>
-                    </tr>
-                </tbody>
-            </table>
-            <div class="info_section">Prix pour la location du matériel : 20 euros par jours</div>
+
+            <h2>Formation de base</h2>
+
+            <div style="display: flex; flex-wrap: wrap; justify-content: center; gap: 1rem;">
+                <div class="card" style="width: 15rem;">
+                    <div class="card-image">
+                        <img src="images/diving/poisson-clown.png" />
+                    </div>
+                    <div class="card-description">
+                        <h3>Scuba diver (SD)</h3>
+                        <p style="font-size: 2rem; text-align: center;">€ 280</p>
+                        <p style="text-align: center;">e-card, e-learning et equipement inclus</p>
+                    </div>
+                </div>
+                <div class="card" style="width: 15rem;">
+                    <div class="card-image">
+                        <img src="images/diving/tortue.png" />
+                    </div>
+                    <div class="card-description">
+                        <h3>Open Water (OW)</h3>
+                        <p style="font-size: 2rem; text-align: center;">€ 390</p>
+                        <p style="text-align: center;">e-card, e-learning et equipement inclus</p>
+                    </div>
+                </div>
+                <div class="card" style="width: 15rem;">
+                    <div class="card-image">
+                        <img src="images/diving/calamar.png" />
+                    </div>
+                    <div class="card-description">
+                        <h3>Advanced Open Water (AOW)</h3>
+                        <p style="font-size: 2rem; text-align: center;">€ 290</p>
+                        <p style="text-align: center;">e-card et e-learning inclus</p>
+                    </div>
+                </div>
+                <div class="card" style="width: 15rem;">
+                    <div class="card-image">
+                        <img src="images/diving/bouee-de-sauvetage.png" />
+                    </div>
+                    <div class="card-description">
+                        <h3>Rescue</h3>
+                        <p style="font-size: 2rem; text-align: center;">€ 450</p>
+                        <p style="text-align: center;">e-card et e-learning inclus</p>
+                    </div>
+                </div>
+
+            </div>
+
+            <h2>Plongée</h2>
+
+           
+            <div style="display: flex; flex-wrap: wrap; justify-content: center; gap: 1rem;">
+                <div class="card" style="width: 15rem;">
+                    <div class="card-description">
+                        <h3>Baptème de plongée</h3>
+                        <p style="font-size: 2rem; text-align: center;">€ 75</p>
+                        <p style="text-align: center;">par plongée</p>
+                    </div>
+                </div>
+    
+                <div class="card" style="width: 15rem;">
+                    <div class="card-description">
+                        <h3>Plongée 1</h3>
+                        <p style="font-size: 2rem; text-align: center;">€ 35</p>
+                        <p style="text-align: center;">par plongée</p>
+                    </div>
+                </div>
+                <div class="card" style="width: 15rem;">
+                    <div class="card-description">
+                        <h3>Plongée 2-6</h3>
+                        <p style="font-size: 2rem; text-align: center;">€ 30</p>
+                        <p style="text-align: center;">par plongée</p>
+                    </div>
+                </div>
+                <div class="card" style="width: 15rem;">
+                    <div class="card-description">
+                        <h3>Plongée 7-10</h3>
+                        <p style="font-size: 2rem; text-align: center;">€ 27</p>
+                        <p style="text-align: center;">par plongée</p>
+                    </div>
+                </div>
+                <div class="card" style="width: 15rem;">
+                    <div class="card-description">
+                        <h3>Plongée 11-20</h3>
+                        <p style="font-size: 2rem; text-align: center;">€ 24</p>
+                        <p style="text-align: center;">par plongée</p>
+                    </div>
+                </div>
+                <div class="card" style="width: 15rem;">
+                    <div class="card-description">
+                        <h3>Plongée 21-...</h3>
+                        <p style="font-size: 2rem; text-align: center;">€ 19</p>
+                        <p style="text-align: center;">par plongée</p>
+                    </div>
+                </div>
+
+                <div class="card" style="width: 15rem;">
+                    <div class="card-description">
+                        <h3>Taxe (obligatoire)</h3>
+                        <p style="font-size: 2rem; text-align: center;">+ € 3</p>
+                        <p style="text-align: center;">par jour, par personne</p>
+                    </div>
+                </div>
+
+                <div class="card" style="width: 15rem;">
+                    <div class="card-description">
+                        <h3>Assurance</h3>
+                        <p style="font-size: 2rem; text-align: center;">+ € 7</p>
+                        <p style="text-align: center;">par semaine</p>
+                    </div>
+                </div>
+
+                <div class="card" style="width: 15rem;">
+                    <div class="card-description">
+                        <h3>Elphinstone</h3>
+                        <p style="font-size: 2rem; text-align: center;">+ € 50</p>
+                        <p style="text-align: center;">zodiaque (eau minérale incluse)</p>
+                    </div>
+                </div>
+
+                <div class="card" style="width: 15rem;">
+                    <div class="card-description">
+                        <h3>Abu Husun SS Hamadi</h3>
+                        <p style="font-size: 2rem; text-align: center;">+ € 30</p>
+                        <p style="text-align: center;">Taxe du parc marin (eau minérale incluses)</p>
+                    </div>
+                </div>
+
+                <div class="card" style="width: 15rem;">
+                    <div class="card-description">
+                        <h3>Bateau</h3>
+                        <p style="font-size: 2rem; text-align: center;">+ € 50</p>
+                        <p style="text-align: center;">Bateau, boissons, repas et taxe d'entrée des sites</p>
+                    </div>
+                </div>
+
+                <div class="card" style="width: 15rem;">
+                    <div class="card-description">
+                        <h3>Abu Dabab - Gebel el Rosas - Shony Bay</h3>
+                        <p style="font-size: 2rem; text-align: center;">+ € 10</p>
+                        <p style="text-align: center;">Taxe d'entrée</p>
+                    </div>
+                </div>
+
+            </div>
+
+            <h2>Equipement</h2>
+
+            <div style="display: flex; flex-wrap: wrap; justify-content: center; gap: 1rem;">
+                <div class="card" style="width: 15rem;">
+                    <div class="card-image">
+                        <img src="images/freepik/003-ocean.png" />
+                    </div>
+                    <div class="card-description">
+                        <h3>Equipement complet (ordinateur non-inclus)</h3>
+                        <p style="font-size: 2rem; text-align: center;">€ 25</p>
+                        <p style="text-align: center;">par jour</p>
+                    </div>
+                </div>
+                <div class="card" style="width: 15rem;">
+                    <div class="card-image">
+                        <img src="images/equipement/bcd.png" />
+                    </div>
+                    <div class="card-description">
+                        <h3>Gilet stabilisateur</h3>
+                        <p style="font-size: 2rem; text-align: center;">€ 8</p>
+                        <p style="text-align: center;">par jour</p>
+                    </div>
+                </div>
+                <div class="card" style="width: 15rem;">
+                    <div class="card-image">
+                        <img src="images/equipement/regulator.png" />
+                    </div>
+                    <div class="card-description">
+                        <h3>Détentdeur</h3>
+                        <p style="font-size: 2rem; text-align: center;">€ 8</p>
+                        <p style="text-align: center;">par jour</p>
+                    </div>
+                </div>
+                <div class="card" style="width: 15rem;">
+                    <div class="card-image">
+                        <img src="images/equipement/lampe.png" />
+                    </div>
+                    <div class="card-description">
+                        <h3>Lampe</h3>
+                        <p style="font-size: 2rem; text-align: center;">€ 8</p>
+                        <p style="text-align: center;">par jour</p>
+                    </div>
+                </div>
+                <div class="card" style="width: 15rem;">
+                    <div class="card-image">
+                        <img src="images/equipement/longsuit.png" />
+                    </div>
+                    <div class="card-description">
+                        <h3>Combinaison longue</h3>
+                        <p style="font-size: 2rem; text-align: center;">€ 8</p>
+                        <p style="text-align: center;">par jour</p>
+                    </div>
+                </div>
+                <div class="card" style="width: 15rem;">
+                    <div class="card-image">
+                        <img src="images/equipement/shorty.png" />
+                    </div>
+                    <div class="card-description">
+                        <h3>Shorty</h3>
+                        <p style="font-size: 2rem; text-align: center;">€ 5</p>
+                        <p style="text-align: center;">par jour</p>
+                    </div>
+                </div>
+                <div class="card" style="width: 15rem;">
+                    <div class="card-image">
+                        <img src="images/equipement/computer.png" />
+                    </div>
+                    <div class="card-description">
+                        <h3>Ordinateur de plongée</h3>
+                        <p style="font-size: 2rem; text-align: center;">€ 8</p>
+                        <p style="text-align: center;">par jour</p>
+                    </div>
+                </div>
+                <div class="card" style="width: 15rem;">
+                    <div class="card-image">
+                        <img src="images/equipement/001-smartwatch.png" />
+                    </div>
+                    <div class="card-description">
+                        <h3>Compas</h3>
+                        <p style="font-size: 2rem; text-align: center;">€ 5</p>
+                        <p style="text-align: center;">par jour</p>
+                    </div>
+                </div>
+                <div class="card" style="width: 15rem;">
+                    <div class="card-image">
+                        <img src="images/equipement/fins-mask-snorkel.png" />
+                    </div>
+                    <div class="card-description">
+                        <h3>Palmes + masque + tuba</h3>
+                        <p style="font-size: 2rem; text-align: center;">€ 7</p>
+                        <p style="text-align: center;">par jour</p>
+                    </div>
+                </div>
+                <div class="card" style="width: 15rem;">
+                    <div class="card-image">
+                        <img src="images/equipement/002-diving-mask.png" />
+                    </div>
+                    <div class="card-description">
+                        <h3>Masque</h3>
+                        <p style="font-size: 2rem; text-align: center;">€ 4</p>
+                        <p style="text-align: center;">par jour</p>
+                    </div>
+                </div>
+                <div class="card" style="width: 15rem;">
+                    <div class="card-image">
+                        <img src="images/equipement/fins.png" />
+                    </div>
+                    <div class="card-description">
+                        <h3>Palmes</h3>
+                        <p style="font-size: 2rem; text-align: center;">€ 4</p>
+                        <p style="text-align: center;">par jour</p>
+                    </div>
+                </div>
+                <div class="card" style="width: 15rem;">
+                    <div class="card-image">
+                        <img src="images/equipement/booties.png" />
+                    </div>
+                    <div class="card-description">
+                        <h3>Bottes</h3>
+                        <p style="font-size: 2rem; text-align: center;">€ 4</p>
+                        <p style="text-align: center;">par jour</p>
+                    </div>
+                </div>
+                <div class="card" style="width: 15rem;">
+                    <div class="card-image">
+                        <img src="images/equipement/001-bouee.png" />
+                    </div>
+                    <div class="card-description">
+                        <h3>Parachute</h3>
+                        <p style="font-size: 2rem; text-align: center;">€ 4</p>
+                        <p style="text-align: center;">par jour</p>
+                    </div>
+                </div>
+                <div class="card" style="width: 15rem;">
+                    <div class="card-image">
+                        <img src="images/equipement/nitroxtank.png" />
+                    </div>
+                    <div class="card-description">
+                        <h3>Nitrox EAN32</h3>
+                        <p style="font-size: 2rem; text-align: center;">€ 3</p>
+                        <p style="text-align: center;">par bouteille</p>
+                    </div>
+                </div>
+                <div class="card" style="width: 15rem;">
+                    <div class="card-image">
+                        <img src="images/equipement/tank.png" />
+                    </div>
+                    <div class="card-description">
+                        <h3>Bouteille 15l</h3>
+                        <p style="font-size: 2rem; text-align: center;">€ 3</p>
+                        <p style="text-align: center;">par bouteille</p>
+                    </div>
+                </div>
+            </div>
+
+            <h2>Spécialités</h2>
+
+            <div style="display: flex; flex-wrap: wrap; justify-content: center; gap: 1rem;">
+                <div class="card" style="width: 15rem;">
+                    <div class="card-image">
+                        <img src="images/equipement/nitroxtank.png" />
+                    </div>
+                    <div class="card-description">
+                        <h3>Nitrox</h3>
+                        <p style="font-size: 2rem; text-align: center;">€ 160</p>
+                        <p style="text-align: center;">e-card et e-learning inclus</p>
+                    </div>
+                </div>
+                <div class="card" style="width: 15rem;">
+                    <div class="card-image">
+                        <img src="images/freepik/004-plongee-1.png" />
+                    </div>
+                    <div class="card-description">
+                        <h3>Deep</h3>
+                        <p style="font-size: 2rem; text-align: center;">€ 240</p>
+                        <p style="text-align: center;">e-card et e-learning inclus</p>
+                    </div>
+                </div>
+                <div class="card" style="width: 15rem;">
+                    <div class="card-image">
+                        <img src="images/equipement/full.png" />
+                    </div>
+                    <div class="card-description">
+                        <h3>Peak Performance Buoyancy</h3>
+                        <p style="font-size: 2rem; text-align: center;">€ 150</p>
+                        <p style="text-align: center;">e-card et e-learning inclus</p>
+                    </div>
+                </div>
+                <div class="card" style="width: 15rem;">
+                    <div class="card-image">
+                        <img src="images/freepik/001-cours.png" />
+                    </div>
+                    <div class="card-description">
+                        <h3>Drift</h3>
+                        <p style="font-size: 2rem; text-align: center;">€ 190</p>
+                        <p style="text-align: center;">e-card et e-learning inclus, et bateau inclus</p>
+                    </div>
+                </div>
+                <div class="card" style="width: 15rem;">
+                    <div class="card-image">
+                        <img src="images/freepik/002-plongee.png" />
+                    </div>
+                    <div class="card-description">
+                        <h3>Wreck</h3>
+                        <p style="font-size: 2rem; text-align: center;">€ 230</p>
+                        <p style="text-align: center;">e-card et e-learning inclus (extra Abu Ghusun trip)</p>
+                    </div>
+                </div>
+            </div>
+
+           
         </main>
     </body>
 </html>
